@@ -1,3 +1,0 @@
-[console_scripts]
-calc = app:user_interface
-
