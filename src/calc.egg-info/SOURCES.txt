@@ -1,0 +1,16 @@
+setup.cfg
+setup.py
+src/app/__init__.py
+src/app/app.py
+src/calc.egg-info/PKG-INFO
+src/calc.egg-info/SOURCES.txt
+src/calc.egg-info/dependency_links.txt
+src/calc.egg-info/entry_points.txt
+src/calc.egg-info/requires.txt
+src/calc.egg-info/top_level.txt
+src/config/__init__.py
+src/config/config.py
+src/operations/__init__.py
+src/operations/operation.py
+test/test_app.py
+test/test_operations.py

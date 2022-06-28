@@ -1,0 +1,13 @@
+pytest
+mypy
+flake8
+coverage
+
+[dev]
+check-manifest
+
+[test]
+pytest
+mypy
+flake8
+coverage
