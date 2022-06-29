@@ -10,7 +10,7 @@ class Operation(ABC):
         """Method to evaluate result of operation"""
 
 
-class addition(Operation):
+class AdditionOperation(Operation):
     """Class to perform addition operation"""
 
     def compute_result(self, operands: list) -> int:
@@ -25,7 +25,7 @@ class addition(Operation):
         return value
 
 
-class subtraction(Operation):
+class SubtractionOperation(Operation):
     """Class to perform subtraction operation"""
 
     def compute_result(self, operands: list) -> int:
@@ -40,7 +40,7 @@ class subtraction(Operation):
         return value
 
 
-class mulitply(Operation):
+class MulitplyOperation(Operation):
     """Class to perform multipliction operation"""
 
     def compute_result(self, operands: list) -> int:
@@ -55,7 +55,7 @@ class mulitply(Operation):
         return value
 
 
-class divide(Operation):
+class DivideOperation(Operation):
     """Class to perform division operation"""
 
     def compute_result(self, operands: list) -> int:

@@ -1,10 +1,10 @@
-__pycache__/*.pyc
 .pytest_cache
 .mypy_cache/
-htmlcov/
-venv/
-__pycache__/
-calc.egg-info
+.vscode/
 .gitkeep
 .coverage
-.pylintrc
+calc.egg-info
+htmlcov/
+venv/
+__pycache__/*.pyc
+__pycache__/

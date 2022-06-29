@@ -4,7 +4,7 @@
 from config.config import OPERATIONS
 
 
-class app:
+class CalcApp:
     """Class representing the application performing the operation requested"""
 
     operation: str

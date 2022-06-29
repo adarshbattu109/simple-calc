@@ -2,11 +2,12 @@
 
 import os
 import sys
-from app.app import app
+from app.app import CalcApp
 
 
 def user_interface() -> None:
-    while(1):
+    """Method to show Looping interface"""
+    while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         print("This is a Simple Calculator\n\n")
         print("The following operations can be perfomed")
@@ -41,7 +42,7 @@ def main(operation: str, operands: list) -> int:
     Returns:
         int: result of the computation
     """
-    app_obj = app(operation=operation, operands=operands)
+    app_obj = CalcApp(operation=operation, operands=operands)
     result = app_obj.get_result()
     return result
 

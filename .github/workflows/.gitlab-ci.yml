@@ -1,0 +1,44 @@
+image: python:latest
+
+stages:
+  - test
+
+before_script:
+  - python --version
+  - pip install virtualenv
+  - virtualenv -p python venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
+  - pip install -e .
+
+flake8:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+  script:
+    - flake8
+
+mypy:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+  script:
+    - mypy src test
+
+pytest:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+  script:
+    - pytest
+  artifacts:
+    paths:
+      - htmlcov
+
+pylint:
+  stage: test
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push"
+  script:
+    - pylint src test
+
