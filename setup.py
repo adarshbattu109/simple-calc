@@ -122,7 +122,8 @@ setup(
     #
     # For an analysis of "install_requires" vs pip's requirements files see:
     # https://packaging.python.org/discussions/install-requires-vs-requirements/
-    install_requires=["pytest", "mypy", "flake8", "coverage"],  # Optional
+    install_requires=["pytest", "mypy", "flake8",
+                      "coverage", "pytest-cov", "pylint"],  # Optional
     # List additional groups of dependencies here (e.g. development
     # dependencies). Users will be able to install these using the "extras"
     # syntax, for example:
@@ -133,7 +134,7 @@ setup(
     # projects.
     extras_require={  # Optional
         "dev": ["check-manifest"],
-        "test": ["pytest", "mypy", "flake8", "coverage"],
+        "test": ["pytest", "mypy", "flake8", "coverage", "pytest-cov", "pylint"],
     },
     # If there are data files included in your packages that need to be
     # installed, specify them here.
