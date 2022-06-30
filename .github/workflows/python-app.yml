@@ -33,7 +33,7 @@ jobs:
         source venv/bin/activate
         pip install -e .
     - name: Lint with flake8
-      uses: py-actions/flake8@v4
+      uses: py-actions/flake8@v2
     - name: Lint with pylint
       run: |
         python -m pylint src test
