@@ -34,8 +34,7 @@ jobs:
         pip install -e .
     - name: Lint with flake8
       run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8
+        flake8 src test
     - name: Lint with pylint
       run: |
         pylint src test
