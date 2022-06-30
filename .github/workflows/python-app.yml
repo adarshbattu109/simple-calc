@@ -41,6 +41,7 @@ jobs:
     - name: Static Code check with mypy
       uses: jpetrucciani/mypy-check@master
       with:
+        path: 'src test'
         mypy_flags: '--config-file setup.cfg'
 
     - name: Test with pytest
