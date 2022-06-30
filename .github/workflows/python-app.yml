@@ -6,8 +6,6 @@ name: Python application
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   workflow_dispatch:
 
 permissions:
@@ -34,12 +32,21 @@ jobs:
         pip install -e .
     - name: Lint with flake8
       uses: py-actions/flake8@v2
+
     - name: Lint with pylint
-      run: |
-        python -m pylint src test
+      uses: fylein/python-pylint-github-action@v1
+      with:
+        args: pylint --rcfile=.pylintrc src test
+
     - name: Static Code check with mypy
-      run: |
-        python -m mypy src test
+      uses: jpetrucciani/mypy-check@master
+
     - name: Test with pytest
-      run: |
-        pytest
+      uses: fylein/python-pytest-github-action@v1
+
+    - name: 'Upload Artifact'
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage report
+        path: htmlcov
+        retention-days: 1
