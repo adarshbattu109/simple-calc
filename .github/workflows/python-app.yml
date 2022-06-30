@@ -42,7 +42,7 @@ jobs:
       uses: jpetrucciani/mypy-check@master
 
     - name: Test with pytest
-      uses: fylein/python-pytest-github-action@v1
+      uses: alexanderdamiani/pytester-cov@v1.2.0
 
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
