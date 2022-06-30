@@ -34,13 +34,13 @@ jobs:
         pip install -e .
     - name: Lint with flake8
       run: |
-        flake8 src test
+        python -m flake8 src test
     - name: Lint with pylint
       run: |
-        pylint src test
+        python -m pylint src test
     - name: Static Code check with mypy
       run: |
-        mypy src test
+        python -m mypy src test
     - name: Test with pytest
       run: |
         pytest
