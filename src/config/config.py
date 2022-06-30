@@ -8,7 +8,7 @@ from operations.operation import DivideOperation
 
 OPERATIONS = {
     "1": AdditionOperation(),
-    "2": SubtractionOperation(), ,
+    "2": SubtractionOperation(),
     "3": MulitplyOperation(),
     "4": DivideOperation(),
 }
