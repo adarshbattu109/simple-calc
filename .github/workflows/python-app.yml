@@ -34,10 +34,9 @@ jobs:
         pip install -e .
     - name: Lint with flake8
       run: |
-        flake8 --format github
+        python -m flake8 --format github
     - name: Lint with pylint
-      run: |
-        python -m pylint src test
+      uses: py-actions/flake8@v3
     - name: Static Code check with mypy
       run: |
         python -m mypy src test
